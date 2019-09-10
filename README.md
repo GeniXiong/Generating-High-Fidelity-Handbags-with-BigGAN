@@ -13,7 +13,12 @@ Since the images are got from different website, the size of images varies. We u
 4. Final Results can be seen on [generated handbags(real and clean)](https://drive.google.com/open?id=1w5_EFZV9n9Ny4WOWIuiCiS_WXXF5_Sqc)
 
 5. We have also done experiment on DCGAN, results can be cheked at [DCGAN results](https://drive.google.com/open?id=1EXAzqOgsCLu-u_UuZByJqiuFq8c16pwW)
-6. Final paper can be checked at [Final Paper link](https://www.overleaf.com/read/bypqwjbtrvdc
+
+6. Traning process(gifs)
+BigGAN: ![alt text](images/biggan.gif)
+DCGAN: ![alt text](images/dcgan.gif)
+
+7. Final paper can be checked at [Final Paper link](https://www.overleaf.com/read/bypqwjbtrvdc
 )
 
 # BigGAN-PyTorch (Segment 2)
