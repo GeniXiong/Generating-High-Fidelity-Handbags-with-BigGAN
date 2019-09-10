@@ -1,8 +1,23 @@
-# BigGAN-PyTorch
+# Generating High Fidelity Handbags (Segment 1)
+⋅⋅* BigGAN-PyTorch introduction and usage is shown in the segment 2.
+⋅⋅* Data Acquisition
+- Training data is parsed and collected on line(from various source, inlcuding but not limited to: 
+https://www.therealreal.com/
+https://www.fashionphile.com/
+https://www.saksfifthavenue.com/Entry.jsp)
+We used several different approaches in collecting training data. Some of us used Images API to download handbag pictures, some one used a github project called google- images-download to collect handbag pictures. The major way we built up our handbag data set is by crawling through shopping websites. Considering that there are many types of handbags, collecting only pictures may not be enough, and not precise in the trainee procedure. So When collect- ing, we simply divide handbags into four major categories, Tote, Satchel, Crossbody and Clutch, and labeled these pic- tures. After removing the images with bad qualities, we finally got 274,709 images.
+Since the images are got from different website, the size of images varies. We unified size of all the images into two types: 64pixel * 64pixel and 128pixel * 128pixel. We use images of 64pixel * 64pixel in DCGAN model and modi- fied conditional DCGAN model and 128pixel * 128pixel in BigGANs.
+- Handbags pics is up to 3G, so downloadable link temporarily revealed.
+⋅⋅* Use a checkpoint
+- Since BigGAN is a rather large GAN model, we can hardly train from scratch, so we used a check point from the pre- trained model on ImageNet. As (Brock et al., 2018) men- tioned: An earlier checkpoint of the first model (100k G iters), at high performance but well before collapse, which may be easier to fine-tune:[link](https://drive.google.com/file/d/1dmZrcVJUAWkPBGza_XgswSuT-UODXZcO/view)
+⋅⋅* Final Results can be seen on [generated handbags(real and clean)](https://drive.google.com/open?id=1w5_EFZV9n9Ny4WOWIuiCiS_WXXF5_Sqc)
+
+⋅⋅* We have also done experiment on DCGAN, results can be cheked at [DCGAN results](https://drive.google.com/open?id=1EXAzqOgsCLu-u_UuZByJqiuFq8c16pwW)
+⋅⋅* Final paper can be checked at [Final Paper link](https://www.overleaf.com/read/bypqwjbtrvdc
+)
+
+# BigGAN-PyTorch (Segment 2)
 The author's officially unofficial PyTorch BigGAN implementation.
-
-![Dogball? Dogball!](imgs/header_image.jpg?raw=true "Dogball? Dogball!")
-
 
 This repo contains code for 4-8 GPU training of BigGANs from [Large Scale GAN Training for High Fidelity Natural Image Synthesis](https://arxiv.org/abs/1809.11096) by Andrew Brock, Jeff Donahue, and Karen Simonyan.
 
